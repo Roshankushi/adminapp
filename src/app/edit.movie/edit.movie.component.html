@@ -1,0 +1,19 @@
+<div class = "add">
+  <div class = "form">
+  <h3 style = margin-top:6px;> Update Movie</h3>
+  <form>
+    
+    <input type = "text" name = "name" [(ngModel)] = "movie.name" placeholder = "name"/><br><br>
+    <input type = "text" name = "year" [(ngModel)] = "movie.year" placeholder = "year"/><br><br>
+    <input type = "text" name = "url" [(ngModel)] = "movie.image_url" placeholder = "image url"/><br><br>
+    <input type = "text" name = "production house" [(ngModel)] = "movie.production_house" placeholder = "production house"/><br><br>
+    <input type = "text" name = "rating" [(ngModel)] = "movie.rating" placeholder = "rating"/><br><br>
+    <input type = "text" name = "type" [(ngModel)] = "movie.type" placeholder = "type"/><br><br>
+    <input type = "text" name = "language" [(ngModel)] = "movie.language" placeholder = "language"/><br><br>
+    <input type = "date" name = "language" [(ngModel)] = "movie.date" placeholder = "date"/><br><br>
+    </form>
+    <input type = "button" name = "date" (click) = "updateMovie(movie)" value = "Update Movie"/>
+    <input type = "button" name = "back" value = "Back" (click) = "navigateToMovie()"/>
+  
+  </div>
+</div>
