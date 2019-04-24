@@ -1,19 +1,54 @@
-<div class = "add">
-  <div class = "form">
-  <h3 style = margin-top:6px;> Add Movie</h3>
-  <form>
-    
-    <input type = "text" name = "name" [(ngModel)] = "movie.name" placeholder = "name"/><br><br>
-    <input type = "text" name = "year" [(ngModel)] = "movie.year" placeholder = "year"/><br><br>
-    <input type = "text" name = "url" [(ngModel)] = "movie.image_url" placeholder = "image url"/><br><br>
-    <input type = "text" name = "production house" [(ngModel)] = "movie.production_house" placeholder = "production house"/><br><br>
-    <input type = "text" name = "rating" [(ngModel)] = "movie.rating" placeholder = "rating"/><br><br>
-    <input type = "text" name = "type" [(ngModel)] = "movie.type" placeholder = "type"/><br><br>
-    <input type = "text" name = "language" [(ngModel)] = "movie.language" placeholder = "language"/><br><br>
-    <input type = "date" name = "language" [(ngModel)] = "movie.date" placeholder = "date"/><br><br>
-    </form>
-    <input type = "button" name = "date" (click) = "addMovie(movie)" value = "Add Movie"/>
-    <input type = "button" name = "back" value = "Back" (click) = "navigateToMovie()"/>
-  
-  </div>
-</div>
+
+<ion-content>
+   
+  <ion-grid>
+    <ion-row color="primary" justify-content-center>
+      <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+        <div text-center>
+          <ion-icon (click)="onBack()" style="float: left;
+          color: #fff;" name="arrow-round-back"></ion-icon><h3 style="color:#fff">Add Movie</h3>
+        </div>
+        <div padding>
+          <ion-item>
+            <ion-input   type="text" name = "name" [(ngModel)] = "movie.name" placeholder = "name"></ion-input>
+          </ion-item><br />
+          <ion-item>
+            <ion-input type="text" name = "year" [(ngModel)] = "movie.year" placeholder = "year"></ion-input>
+          </ion-item><br />
+          <ion-item>
+            <ion-input type="text" name = "url" [(ngModel)] = "movie.image_url" placeholder = "image url"></ion-input>
+          </ion-item><br />
+          <ion-item>
+            <ion-input type="text" name = "production house" [(ngModel)] = "movie.production_house" placeholder = "production house" ></ion-input>
+          </ion-item><br />
+          <ion-item>
+              <ion-input  type="text" name = "rating" [(ngModel)] = "movie.rating" placeholder = "rating"></ion-input>
+            </ion-item><br />
+
+ <ion-item>
+              <ion-input  type="text" name = "type" [(ngModel)] = "movie.type" placeholder = "type"></ion-input>
+            </ion-item><br />
+
+ <ion-item>
+              <ion-input  type="text" name = "language" [(ngModel)] = "movie.language" placeholder = "language"></ion-input>
+            </ion-item><br />
+
+ <ion-item>
+              <ion-input  type = "date" name = "language" [(ngModel)] = "movie.date" placeholder = "date"></ion-input>
+            </ion-item>
+
+        </div>
+         <div>
+          <ion-button  style="width: 48%;--background:#fff;
+          --color: #dd4f37;"size="large"   expand="medium" name = "date" (click) = "addMovie(movie)">Add Movie</ion-button>
+          <ion-button  style="width: 48%;--background:#fff;
+          --color: #dd4f37;"size="large"  expand="medium" name = "back" value = "Back" (click) = "navigateToMovie()">Back</ion-button>
+        </div>
+
+      
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

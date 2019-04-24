@@ -31,6 +31,8 @@ export class EditMovieComponent implements OnInit {
   navigateToMovie(){
     this.router.navigate(['/movie']);
   }
-
+  onBack(){
+  	this.router.navigate(['/movie']);
+  }
 
 }

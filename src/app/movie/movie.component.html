@@ -1,31 +1,36 @@
 
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar style="--background:#df3e21;">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
-      Movies List
-    </ion-title>
+    <div text-center>
+      <ion-icon (click)="onBack()" style="float: left;
+      color: #fff;" name="arrow-round-back"></ion-icon><h3 style="color:#fff">Movie List</h3>
+    </div>
   </ion-toolbar>
 </ion-header> 
 
 
 <ion-content >
-<ion-button  (click)="onAdd()">Add Button</ion-button>
+<ion-button style="    width: 48%;
+margin-top: 50px;--background:#df3e21;--color:#fff;" (click)="onAdd()">Add Movie</ion-button>
+<ion-button style="    width: 48%;
+margin-top: 50px;--background:#df3e21;--color:#fff;" (click)="onBack()">Log Out</ion-button>
 
 
        <ion-col  *ngFor="let m of movies">
-           <ion-card style="margin:0px;">
+           <ion-card style="    margin: 15px;
+           padding: 10px;">
             
-            <ion-img    src={{m.image_url}} (click)="onImage()"></ion-img>
-            <p text-center><b><a button >{{m.name}}</a></b></p>
-            <ion-list >
+            <ion-img  style="height:350px"  src={{m.image_url}} (click)="onImage()"></ion-img>
+            <p text-center ><b><a style="color:#df3e21;" button >{{m.name}}</a></b></p>
+            <ion-list style="text-align:center;">
               <ion-icon name="star"></ion-icon><ion-icon name="star">
             </ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star-half"></ion-icon>
             <ion-icon name="star-outline"></ion-icon></ion-list>
-            <ion-button  (click) = "editMovie(m)">Edit</ion-button> 
-            <ion-button style="float:right;" (click)="deleteMovieList(m.id)">Delete</ion-button>
+            <ion-button style="--background:#df3e21;--color:#fff;" (click) = "editMovie(m)">Edit</ion-button> 
+            <ion-button style="float:right;--background:#dd4f37;--color:#fff;" (click)="deleteMovieList(m.id)">Delete</ion-button>
            </ion-card>           
            </ion-col>
        

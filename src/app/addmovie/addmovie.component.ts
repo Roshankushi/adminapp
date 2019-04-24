@@ -28,4 +28,7 @@ export class AddmovieComponent implements OnInit {
   navigateToMovie(){
     this.router.navigate(['/movie']);
   }
+  onBack(){
+  	this.router.navigate(['/movie']);
+  }
 }

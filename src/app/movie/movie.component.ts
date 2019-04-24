@@ -52,6 +52,8 @@ editMovie(movie){
     
   }
 
-
+  onBack(){
+  	this.router.navigate(['/login']);
+  }
 
 }
